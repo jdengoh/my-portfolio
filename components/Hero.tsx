@@ -28,7 +28,7 @@ export const Hero = () => {
               alt="Profile Picture"
               width={300}
               height={300}
-              className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover border-[0.2rem] rounded-full border-white"
+              className="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-cover border-[0.2rem] rounded-full border-black dark:border-white"
             />
           </motion.div>
 
