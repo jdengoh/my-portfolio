@@ -32,9 +32,9 @@ export const About = () => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <div className="text-gray-700 dark:text-gray-300 text-lg mb-6 lg:text-xl leading-relaxed">
-            Final-year Computer Science student with hands-on experience developing production-ready backend systems and integrating AI capabilities into
-            scalable services. I specialize in building robust API architectures with advanced AI orchestration frameworks like Semantic Kernel and LangGraph,
-            creating intelligent systems that bridge cutting-edge AI agents with practical, deployable applications.
+            Final-year Computer Science student with hands-on experience developing production-ready <b>backend systems</b> and integrating AI capabilities into
+            scalable services. I specialize in building robust API architectures with advanced AI orchestration frameworks like <b>Semantic Kernel</b> and{' '}
+            <b>LangGraph</b>, creating intelligent systems that bridge AI agents with practical, deployable applications.
           </div>
           <div className="text-gray-700 dark:text-gray-300 text-lg lg:text-xl leading-relaxed">
             I am currently an{' '}
@@ -47,8 +47,10 @@ export const About = () => {
             <Highlight>
               <b>Synapxe</b>
             </Highlight>{' '}
-            since January 2025, developing AI-driven healthcare solutions that enhances accessibility to health-related resources and information.
+            since January 2025, developing AI-driven healthcare solutions that enhances accessibility to health-related resources and information. Beyond
+            coding, I enjoy playing floorball and keeping myself active through sports.
           </div>
+          <div className="text-gray-700 dark:text-gray-300 text-lg lg:text-xl leading-relaxed"></div>
         </motion.div>
       </div>
     </section>
