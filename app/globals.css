@@ -81,10 +81,20 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* My own custom ones */
+  /* Add navbar variables for light mode */
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --navbar-border: rgba(229, 231, 235, 0.3);
+  --navbar-text: #4b5563;
+  --navbar-text-hover: #111827;
+  --navbar-text-active: #111827;
+  --navbar-bg-active: #f3f4f6;
+  --navbar-border-element: #d1d5db;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(20% 0.035 252); /* Slightly darker, warmer navy */
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -115,6 +125,15 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Update navbar variables for dark mode */
+  --navbar-bg: oklch(20% 0.04 252 / 0.85);
+  --navbar-border: oklch(30% 0.03 252 / 0.3);
+  --navbar-text: oklch(75% 0.02 252);
+  --navbar-text-hover: oklch(85% 0.01 252);
+  --navbar-text-active: oklch(90% 0.01 252);
+  --navbar-bg-active: oklch(28% 0.025 252);
+  --navbar-border-element: oklch(35% 0.02 252);
 }
 
 @layer base {
@@ -126,6 +145,7 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
   }
 }
 
+/* Add this to your globals.css */
 .mouse {
   display: inline-flex;
   width: 25px;
@@ -134,18 +154,17 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
   border-radius: 23px;
   position: relative;
   background: transparent;
-  border-color: #9e9e9e;
 }
 
 .mouse-wheel {
   display: inline-block;
   width: 4px;
   height: 10px;
-  background-color: #9e9e9e;
+  background-color: #fff;
   border-radius: 50%;
   margin: 6px auto 0;
   animation: movewheel 1.25s linear infinite;
-  border-color: #9e9e9e;
+  z-index: inherit;
 }
 
 @keyframes movewheel {
@@ -166,4 +185,46 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
 
 .dark .mouse-wheel {
   background-color: #6b7280;
+}
+
+.page-gradient {
+  background: radial-gradient(ellipse 120% 60% at top center, oklch(98% 0.01 250) 0%, oklch(100% 0 0) 40%);
+}
+
+.dark .page-gradient {
+  background: radial-gradient(ellipse 120% 60% at top center, oklch(26% 0.05 255) 0%, oklch(22% 0.04 252) 30%, oklch(18% 0.035 250) 70%);
+}
+
+.navbar-natural {
+  background: var(--navbar-bg);
+  border: 1px solid var(--navbar-border);
+}
+
+.navbar-link {
+  color: var(--navbar-text);
+}
+
+.navbar-link:hover {
+  color: var(--navbar-text-hover);
+}
+
+/* Active navbar link styles */
+.navbar-link-active {
+  color: var(--navbar-text-active);
+}
+
+/* Active background highlight */
+.navbar-active-bg {
+  background: var(--navbar-bg-active);
+}
+
+/* CV button styles */
+.navbar-button {
+  color: var(--navbar-text);
+  background: transparent;
+  border: 1px solid var(--navbar-border-element);
+}
+
+.navbar-button:hover {
+  color: var(--navbar-text-hover);
 }
