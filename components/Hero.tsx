@@ -98,7 +98,7 @@ export const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="flex flex-col items-center gap-3 pb-8 landscape:hidden"
+        className="flex flex-col items-center gap-3 pb-8 max-md:landscape:hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 0.8 }}
