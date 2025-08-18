@@ -145,7 +145,6 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
   }
 }
 
-/* Add this to your globals.css */
 .mouse {
   display: inline-flex;
   width: 25px;
@@ -154,17 +153,18 @@ https://www.sujalvanjare.com/blog/dark-mode-nextjs15-tailwind-v4
   border-radius: 23px;
   position: relative;
   background: transparent;
+  border-color: #9e9e9e;
 }
 
 .mouse-wheel {
   display: inline-block;
   width: 4px;
   height: 10px;
-  background-color: #fff;
+  background-color: #9e9e9e;
   border-radius: 50%;
   margin: 6px auto 0;
   animation: movewheel 1.25s linear infinite;
-  z-index: inherit;
+  border-color: #9e9e9e;
 }
 
 @keyframes movewheel {
